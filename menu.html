@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/menu.min.css">
+    <title>Menu Resourse Coffee House</title>
+  </head>
+  <body>
+
+    <div id="app">
+
+    <header>
+      <div class="navigation">
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./assets/icons/logo1.svg" alt="" />
+            <img src="./assets/icons/logo2.svg" alt="" />
+            <img src="./assets/icons/logo3.svg" alt="" />
+          </a>
+        </div>
+        <div class="navMenu">
+          <ul>
+            <li><a href="#">Favorite coffee</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Mobile app</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+        <div class="menu">
+          <p><a href="./menu.html">Menu</a></p>
+          <img src="./assets/icons/coffee-cup.svg" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="menuText">
+        <h1>
+          Behind each of our cups <br />
+          hides <span>an amazing surprise</span>
+        </h1>
+      </section>
+
+      <section class="changePageButtons">
+
+        <div class="button-container">
+          <button class="button" onclick="changePage(1)">
+            <p><span>☕</span>Coffee</p>
+          </button>
+          <button class="button" onclick="changePage(2)">
+            <p><span>🫖</span>Tea</p>
+          </button>
+          <button class="button" onclick="changePage(3)">
+            <p><span>🍰</span>Desserts</p>
+          </button>
+        </div>
+
+        <div class="page-container">
+          <div id="page1" class="page active">
+            <div class="coffeeProducts">
+              <div
+                class="itemHover"
+                onclick="openModal('Irish coffee', './assets/images/coffee-1.png', 'Fragrant black coffee with Jameson Irish whiskey and whipped milk', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$7.00' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-1.png" alt="" /></li>
+                  <li><b>Irish coffee</b></li>
+                  <li>
+                    Fragrant black coffee with Jameson Irish whiskey and whipped
+                    milk
+                  </li>
+                  <li><b>$7.00</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Kahlua coffee', './assets/images/coffee-2.png', 'Classic coffee with milk and Kahlua liqueur under a cap of frothed milk', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$7.00' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-2.png" alt="" /></li>
+                  <li><b>Kahlua coffee</b></li>
+                  <li>
+                    Classic coffee with milk and Kahlua liqueur under a cap of
+                    frothed milk
+                  </li>
+                  <li><b>$7.00</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Honey raf', './assets/images/coffee-3.png', 'Espresso with frothed milk, cream and aromatic honey', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$5.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-3.png" alt="" /></li>
+                  <li><b>Honey raf</b></li>
+                  <li>Espresso with frothed milk, cream and aromatic honey</li>
+                  <li><b>$5.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Ice cappuccino', './assets/images/coffee-4.png', 'Cappuccino with soft thick foam in summer version with ice', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$5.00' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-4.png" alt="" /></li>
+                  <li><b>Ice cappuccino</b></li>
+                  <li>
+                    Cappuccino with soft thick foam in summer version with ice
+                  </li>
+                  <li><b>$5.00</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Espresso', './assets/images/coffee-5.png', 'Classic black coffee', ['100 ml'], ['Sugar', 'Cinnamon','Syrup'], '$4.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-5.png" alt="" /></li>
+                  <li><b>Espresso</b></li>
+                  <li>Classic black coffee <br />&nbsp;</li>
+                  <li><b>$4.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Latte', './assets/images/coffee-6.png', 'Espresso coffee with the addition of steamed milk and dense milk foam', ['300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$5.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-6.png" alt="" /></li>
+                  <li><b>Latte</b></li>
+                  <li>
+                    Espresso coffee with the addition of steamed milk and dense
+                    milk foam
+                  </li>
+                  <li><b>$5.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Latte macchiato', './assets/images/coffee-7.png', 'Espresso with frothed milk and chocolate', ['200 ml','300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$5.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-7.png" alt="" /></li>
+                  <li><b>Latte macchiato</b></li>
+                  <li>Espresso with frothed milk <br />and chocolate</li>
+                  <li><b>$5.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Coffee with cognac', './assets/images/coffee-8.png', 'Fragrant black coffee with cognac and whipped cream', ['200 ml','300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$6.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/coffee-8.png" alt="" /></li>
+                  <li><b>Coffee with cognac</b></li>
+                  <li>Fragrant black coffee with cognac and whipped cream</li>
+                  <li><b>$6.50</b></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="page2" class="page">
+            <div class="teaProducts">
+              <div
+                class="itemHover"
+                onclick="openModal('Moroccan', './assets/images/tea-1.png', 'Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$4.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/tea-1.png" alt="" /></li>
+                  <li><b>Moroccan</b></li>
+                  <li>
+                    Fragrant black tea with the addition of tangerine, honey,
+                    lemon and mint
+                  </li>
+                  <li><b>$4.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Ginger', './assets/images/tea-2.png', 'Original black tea with fresh ginger, lemon and honey', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$5.00' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/tea-2.png" alt="" /></li>
+                  <li><b>Ginger</b></li>
+                  <li>Original black tea with fresh ginger, lemon and honey</li>
+                  <li><b>$5.00</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Cranberry', './assets/images/tea-3.png', 'Invigorating black tea with cranberry and honey', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$5.00' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/tea-3.png" alt="" /></li>
+                  <li><b>Cranberry</b></li>
+                  <li>Invigorating black tea with cranberry and honey</li>
+                  <li><b>$5.00</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Sea buckthorn', './assets/images/tea-4.png', 'Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon', ['200 ml', '300 ml', '400 ml'], ['Sugar', 'Cinnamon','Syrup'], '$5.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/tea-4.png" alt="" /></li>
+                  <li><b>Sea buckthorn</b></li>
+                  <li>
+                    Toning sweet black tea with sea buckthorn, fresh thyme and
+                    cinnamon
+                  </li>
+                  <li><b>$5.50</b></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div id="page3" class="page">
+            <div class="dessertsProducts">
+                <div
+                class="itemHover"
+                onclick="openModal('Marble cheesecake', './assets/images/dessert-1.png', 'Philadelphia cheese with lemon zest on a light sponge cake and red currant jam', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$3.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-1.png" alt="" /></li>
+                  <li><b>Marble cheesecake</b></li>
+                  <li>
+                    Philadelphia cheese with lemon zest on a light sponge cake and red currant jam
+                  </li>
+                  <li><b>$3.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Red velvet', './assets/images/dessert-2.png', 'Layer cake with cream cheese frosting', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$4.00' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-2.png" alt="" /></li>
+                  <li><b>Red velvet</b></li>
+                  <li>
+                    Layer cake with cream cheese frosting <br> &nbsp;
+                  </li>
+                  <li><b>$4.00</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Cheesecakes', './assets/images/dessert-3.png', 'Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$4.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-3.png" alt="" /></li>
+                  <li><b>Cheesecakes</b></li>
+                  <li>
+                    Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar
+                  </li>
+                  <li><b>$4.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Creme brulee', './assets/images/dessert-4.png', 'Delicate creamy dessert in a caramel basket with wild berries', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$4.00' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-4.png" alt="" /></li>
+                  <li><b>Creme brulee</b></li>
+                  <li>
+                    Delicate creamy dessert in a caramel basket with wild berries
+                  </li>
+                  <li><b>$4.00</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Pancakes', './assets/images/dessert-5.png', 'Tender pancakes with strawberry jam and fresh strawberries', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$4.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-5.png" alt="" /></li>
+                  <li><b>Pancakes</b></li>
+                  <li>
+                    Tender pancakes with strawberry jam and fresh strawberries
+                  </li>
+                  <li><b>$4.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Honey cake', './assets/images/dessert-6.png', 'Classic honey cake with delicate custard', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$4.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-6.png" alt="" /></li>
+                  <li><b>Honey cake</b></li>
+                  <li>
+                    Classic honey cake with delicate custard <br> &nbsp;
+                  </li>
+                  <li><b>$4.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Chocolate cake', './assets/images/dessert-7.png', 'Cake with hot chocolate filling and nuts with dried apricots', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$5.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-7.png" alt="" /></li>
+                  <li><b>Chocolate cake</b></li>
+                  <li>
+                    Cake with hot chocolate filling and nuts with dried apricots
+                  </li>
+                  <li><b>$5.50</b></li>
+                </ul>
+              </div>
+              <div
+                class="itemHover"
+                onclick="openModal('Black forest', './assets/images/dessert-8.png', 'A combination of thin sponge cake with cherry jam and light chocolate mousse', ['50 g', '100 g', '200 g'], ['Berries', 'Nuts','Jam'], '$6.50' )"
+              >
+                <ul>
+                  <li><img src="./assets/images/dessert-8.png" alt="" /></li>
+                  <li><b>Black forest</b></li>
+                  <li>
+                    A combination of thin sponge cake with cherry jam and light chocolate mousse
+                  </li>
+                  <li><b>$6.50</b></li>
+                </ul>
+              </div>
+
+            </div>
+        </div>
+
+        <div class="modal" id="myModal">
+          <div class="modal-content">
+            <img
+              class="product-image"
+              id="modalImage"
+              src=""
+              alt="Product Image"
+            />
+            <div class="product-info" id="modalProductInfo"></div>
+            <div class="size-buttons" id="modalSizeButtons"></div>
+            <div class="add-on-buttons" id="modalAddOnButtons"></div>
+            <div class="price" id="modalPrice"></div>
+            <p class="close-button" onclick="closeModal()">Close</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <div class="footerContainer">
+          <div class="footerInfo">
+            <div class="infoMessagers">
+              <h3>Sip, Savor, Smile. <br /><span>It’s coffee time!</span></h3>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/icons/twitter.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/icons/instagram.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/icons/facebook.png" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="infoContacts">
+              <p>Contact us</p>
+              <ul>
+                <li>
+                  <a href="#" id="addressLink"
+                    ><img src="./assets/icons/pin-alt.svg" alt="" /><span
+                      >8558 Green Rd., LA</span
+                    ></a
+                  >
+                  <div id="modalMap" class="modalMap">
+                    <div class="modalContentMap">
+                      <!-- Здесь можете добавить контент модального окна, включая карту -->
+                      <div id="mapInModal"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <img src="./assets/icons/phone.svg" alt="" /><span
+                    >+1 (603) 555-0123</span
+                  >
+                </li>
+                <li>
+                  <img src="./assets/icons/clock.svg" alt="" /><span
+                    >Mon-Sat: 9:00 AM – 23:00 PM</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </footer>
+
+    </div>
+
+     <script src="./menu.js"></script>
+     <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-CPi-zc51F8nlsDE7HZoXl5oWlH5XfFY&callback=initMap"
+    ></script>
+
+  </body>
+</html>

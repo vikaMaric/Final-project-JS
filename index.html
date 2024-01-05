@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Resourse Coffee House</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="navigation">
+          <div class="logo">
+            <a href="./index.html">
+              <img src="./assets/icons/logo1.svg" alt="" />
+              <img src="./assets/icons/logo2.svg" alt="" />
+              <img src="./assets/icons/logo3.svg" alt="" />
+            </a>
+          </div>
+          <div class="navMenu">
+            <ul>
+              <li><a href="#">Favorite coffee</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Mobile app</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="menu">
+            <p><a href="./menu.html">Menu</a></p>
+            <img src="./assets/icons/coffee-cup.svg" alt="" />
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="firstContainer">
+          <video src="./assets/video/video.mp4" autoplay muted loop></video>
+          <div class="overlayInfo">
+            <h1><span>Enjoy</span> premium coffee at our charming cafe</h1>
+            <p>
+              With its inviting atmosphere and delicious coffee options, the
+              Coffee <br />House Resource is a popular destination for coffee
+              lovers and those seeking a warm and inviting space to enjoy their
+              favorite beverage.
+            </p>
+            <button>
+              <a href="./menu.html">Menu</a>
+            </button>
+          </div>
+        </section>
+
+        <section class="secondContainer">
+          <h1>Choose your <span>favorite</span> coffee</h1>
+        </section>
+
+        <div id="slider-container">
+          <div id="slider-images">
+            <div class="slide">
+              <img src="./assets/images/coffee-slider-1.png" alt="Image 1" />
+            </div>
+            <div class="slide">
+              <img src="./assets/images/coffee-slider-2.png" alt="Image 2" />
+            </div>
+            <div class="slide">
+              <img src="./assets/images/coffee-slider-3.png" alt="Image 3" />
+            </div>
+          </div>
+
+          <button id="prev-btn" onclick="prevSlide()" disabled>
+            <img src="./assets/icons/arrow-left.svg" alt="" />
+          </button>
+
+          <button id="next-btn" onclick="nextSlide()">
+            <img src="./assets/icons/arrow-right.svg" alt="" />
+          </button>
+
+          <div id="info-container">
+            <h3 id="slide-title"></h3>
+            <p id="slide-text"></p>
+            <p id="slide-price"></p>
+            <div id="indicators-container">
+              <div class="indicator active"></div>
+              <div class="indicator"></div>
+              <div class="indicator"></div>
+            </div>
+          </div>
+        </div>
+
+        <section class="thirdContainer">
+          <p>
+            Resource is <span>the perfect and cozy place</span> where you can
+            enjoy a variety of hot beverages, relax,<br />
+            catch up with friends, or get some work done.
+          </p>
+          <div class="galleryAbout">
+            <div class="gallery-item">
+              <img src="./assets/images/about-1.jpg" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="./assets/images/about-2.jpg" alt="" />
+            </div>
+
+            <div class="gallery-item">
+              <img src="./assets/images/about-3.jpg" alt="" />
+            </div>
+
+            <div class="gallery-item">
+              <img src="./assets/images/about-4.jpg" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="forthContainer">
+          <div class="downloadInfo">
+            <h3><span>Download</span> our apps to start ordering</h3>
+            <p>
+              Download the Resource app today and experience the comfort of
+              ordering your favorite coffee from wherever you are
+            </p>
+            <ul>
+              <li>
+                <a href="https://www.apple.com/app-store" class="buttonApp">
+                  <img src="./assets/icons/icon-apple.svg" alt="" />
+                  <span>Available on <br />App Store</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://play.google.com/store" class="buttonApp">
+                  <img src="./assets/icons/icon-google.svg" alt="" />
+                  <span>Available on <br />Google Play</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="downloadImg">
+            <img src="./assets/images/mobile-screens.png" alt="" />
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="footerContainer">
+          <div class="footerInfo">
+            <div class="infoMessagers">
+              <h3>Sip, Savor, Smile. <br /><span>It’s coffee time!</span></h3>
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/icons/twitter.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/icons/instagram.png" alt=""
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img src="./assets/icons/facebook.png" alt=""
+                  /></a>
+                </li>
+              </ul>
+            </div>
+            <div class="infoContacts">
+              <p>Contact us</p>
+              <ul>
+                <li>
+                  <a href="#" id="addressLink"
+                    ><img src="./assets/icons/pin-alt.svg" alt="" /><span
+                      >8558 Green Rd., LA</span
+                    ></a
+                  >
+                  <div id="modalMap" class="modalMap">
+                    <div class="modalContentMap">
+                      <!-- Здесь можете добавить контент модального окна, включая карту -->
+                      <div id="mapInModal"></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <img src="./assets/icons/phone.svg" alt="" /><span
+                    >+1 (603) 555-0123</span
+                  >
+                </li>
+                <li>
+                  <img src="./assets/icons/clock.svg" alt="" /><span
+                    >Mon-Sat: 9:00 AM – 23:00 PM</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./index.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-CPi-zc51F8nlsDE7HZoXl5oWlH5XfFY&callback=initMap"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,422 @@
+.menuText {
+    h1 {
+        font-size: 3.2vw;
+        font-style: normal;
+        font-family: Inter;
+        font-weight: 600;
+        line-height: 125%;
+        text-align: center;
+        color: var(--font-color);
+
+        span {
+            color: var(--third-font-color);
+            font-style: italic;
+        }
+    }
+}
+
+.changePageButtons {
+
+    .button-container {
+        display: flex;
+        gap: 16px;
+        margin: 20px;
+        justify-content: center;
+
+        .button {
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            background-color: var(--second-font-color);
+            border: 1px solid var(--border-color);
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            color: var(--font-color);
+            // width: 12%;
+
+            p {
+                font-size: 1.2vw;
+                font-style: normal;
+                font-family: Inter;
+                font-weight: 500;
+                line-height: 140%;
+                margin: 5px;
+
+                span {
+                    margin-right: 5px;
+                    border: 1px solid var(--border-color);
+                    padding: 9px;
+                    border-radius: 100%;
+                    background-color: var(--border-color);
+                }
+            }
+        }
+
+        .button.active {
+            background-color: var(--footer-bg-color);
+            color: var(--second-font-color);
+        }
+    }
+
+    .page-container {
+        text-align: center;
+        padding: 20px;
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        #page1 {
+            color: var(--font-color);
+
+            .coffeeProducts {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                
+
+                .itemHover {
+                    transition: transform 0.3s ease-in-out;
+
+                    ul {
+                        list-style: none;
+                        border: 1px solid var(--border-color);
+                        border-radius: 40px;
+                        padding: 15px 10px 5px 10px;
+
+                        li {
+                            margin-bottom: 10px;
+                            font-size: 1.1vw;
+
+                            img {
+                                border-radius: 40px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .itemHover:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        #page2 {
+            color: var(--font-color);
+
+            .teaProducts {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+
+                .itemHover {
+                    transition: transform 0.3s ease-in-out;
+
+                    ul {
+                        list-style: none;
+                        border: 1px solid var(--border-color);
+                        border-radius: 40px;
+                        padding: 15px 10px 5px 10px;
+
+                        li {
+                            margin-bottom: 10px;
+                            font-size: 1.1vw;
+
+                            img {
+                                border-radius: 40px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .itemHover:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        #page3 {
+            color: var(--font-color); 
+
+            .dessertsProducts {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+
+                .itemHover {
+                    transition: transform 0.3s ease-in-out;
+
+                    ul {
+                        list-style: none;
+                        border: 1px solid var(--border-color);
+                        border-radius: 40px;
+                        padding: 15px 10px 5px 10px;
+
+                        li {
+                            margin-bottom: 10px;
+                            font-size: 1.1vw;
+
+                            img {
+                                border-radius: 40px;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                .itemHover:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(106, 103, 103, 0.5);
+            justify-content: center;
+            align-items: center;
+
+            .modal-content {
+                background-color: var(--second-font-color);
+                padding: 20px;
+                border-radius: 20px;
+                max-width: 80%;
+                text-align: center;
+                position: relative;
+
+                .product-image {
+
+                    max-width: 100% !important;
+                    height: auto !important;
+                    border-radius: 20px;
+                    margin-bottom: 10px;
+                }
+
+                .product-info {
+                    margin-bottom: 10px;
+                    font-size: 1.2vw;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 200%;
+                    color: var(--font-color);
+                    font-family: Inter;
+                    
+                }
+
+                .size-buttons {
+                    margin-bottom: 10px;
+
+                    .size-button {
+                          padding: 10px !important;
+                          margin: 5px !important;
+                          background-color: var(--second-font-color) !important;
+                          color: var(--font-color) !important;
+                          font-size: 1.1vw;
+                          border: 1px solid var(--border-color) !important;
+                          border-radius: 50px !important;
+                          cursor: pointer !important;
+                          transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out !important;
+                    }
+
+                    .size-button:hover {
+                         background-color: var(--footer-bg-color) !important;
+                         color: var(--second-font-color)!important;
+                        }
+                }
+
+                .add-on-buttons {
+                    margin-bottom: 10px;
+
+                    .add-on-button {
+                     padding: 10px !important;
+                     margin: 5px !important;
+                     background-color: var(--second-font-color) !important;
+                     color: var(--font-color) !important;
+                     font-size: 1.1vw;
+                     border: 1px solid var(--border-color) !important;
+                     border-radius: 50px !important;
+                     cursor: pointer !important;
+                     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out !important;
+                   }
+
+                   .add-on-button:hover {
+                     background-color:var(--footer-bg-color) !important;
+                     color: var(--second-font-color) !important;
+                   }
+                }
+
+                .price {
+                    font-size: 1.5vw;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 125%;
+                    color: var(--font-color);
+                    margin-bottom: 15px;
+                    font-family: Inter;
+                }
+
+                .close-button {
+                    cursor: pointer;
+                    font-size: 1.2vw;
+                    border: 1px solid var(--footer-bg-color);
+                    border-radius: 100px;
+                    display: flex;
+                    padding: 10px 78px;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px;
+                    color: var(--font-color);
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 695px) {
+
+    .changePageButtons {
+    .page-container {
+        #page1 {
+            .coffeeProducts {
+                .itemHover {
+                    ul {
+                        padding: 5px;
+                        li {
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        #page2 {
+            .teaProducts {
+                .itemHover {
+                    ul {
+                        padding: 5px;
+                        li {
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        #page3 {
+            .dessertsProducts {
+                .itemHover {
+                    ul {
+                        padding: 5px;
+                        li {
+                            font-size: 1.2vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+} 
+} 
+
+
+@media screen and (max-width: 556px) {
+
+    .changePageButtons {
+        .button-container {
+            .button {
+                padding: 8px 3px;
+                p {
+                    font-size: 2vw;
+                }
+            }
+        }
+
+        .page-container {
+
+            #page1 {
+
+                .coffeeProducts {
+
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 15px;
+
+                    .itemHover {
+                         ul {
+                            padding: 10px;
+                            border-radius: 20px;
+                            li {
+                                font-size: 1.5vw;
+
+                                img {
+                                    border-radius: 10px;
+                                }
+                            }
+                         }
+                    }
+                }
+            }
+
+            #page2 {
+                .teaProducts {
+
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 15px;
+
+                    .itemHover {
+                        ul {
+                            padding: 10px;
+                            border-radius: 20px;
+                            li {
+                                font-size:1.5vw;
+
+                                img {
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #page3 {
+                .dessertsProducts {
+
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 15px;
+
+                    .itemHover {
+                        ul {
+                            padding: 10px;
+                            border-radius: 20px;
+                            li {
+                                font-size:1.5vw;
+
+                                img {
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,636 @@
+@import "../assets/fonts/InterFont.css";
+:root {
+  --font-color: #403f3d;
+  --second-font-color: #e1d4c9;
+  --third-font-color: #b0907a;
+  --footer-bg-color: #665f55;
+  --border-color: #c1b6ad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+}
+
+body {
+  background-color: #e1d4c9;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input, textarea, button {
+  border: none;
+  background-color: transparent;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.navigation .logo {
+  width: 100px;
+  height: 60px;
+}
+.navigation .logo img {
+  position: relative;
+}
+.navigation .logo :nth-child(1) {
+  left: 27%;
+}
+.navigation .logo :nth-child(2) {
+  bottom: 60%;
+}
+.navigation .logo :nth-child(3) {
+  bottom: 55%;
+  left: 15%;
+}
+.navigation .navMenu ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navigation .navMenu ul li {
+  margin-left: 5vh;
+  font-size: 1.2vw;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+}
+.navigation .navMenu ul li a {
+  color: var(--font-color);
+}
+.navigation .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2vw;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 150%;
+}
+.navigation .menu p a {
+  color: var(--font-color);
+}
+.navigation .menu :nth-child(1) {
+  margin-right: 0.2vh;
+}
+.navigation .menu :nth-child(2) {
+  margin-bottom: 2px;
+}
+
+@media screen and (max-width: 534px) {
+  .navigation {
+    padding: 20px;
+  }
+  .navigation .navMenu ul li {
+    margin-left: 2vh;
+    font-size: 1.8vw;
+  }
+  .navigation .menu {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  .navigation {
+    padding: 15px;
+  }
+  .navigation .navMenu ul li {
+    margin-left: 1.5vh;
+    font-size: 1.6vw;
+  }
+  .navigation .menu {
+    font-size: 1.6vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  .navigation {
+    padding: 10px;
+  }
+  .navigation .navMenu ul li {
+    margin-left: 1.2vh;
+    font-size: 1.3vw;
+  }
+  .navigation .menu {
+    font-size: 1.3vw;
+  }
+  .navigation .menu img {
+    width: 30%;
+  }
+}
+.menuText h1 {
+  font-size: 3.2vw;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 125%;
+  text-align: center;
+  color: var(--font-color);
+}
+.menuText h1 span {
+  color: var(--third-font-color);
+  font-style: italic;
+}
+
+.changePageButtons .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  margin: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.changePageButtons .button-container .button {
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  background-color: var(--second-font-color);
+  border: 1px solid var(--border-color);
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.changePageButtons .button-container .button p {
+  font-size: 1.2vw;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 5px;
+}
+.changePageButtons .button-container .button p span {
+  margin-right: 5px;
+  border: 1px solid var(--border-color);
+  padding: 9px;
+  border-radius: 100%;
+  background-color: var(--border-color);
+}
+.changePageButtons .button-container .button.active {
+  background-color: var(--footer-bg-color);
+  color: var(--second-font-color);
+}
+.changePageButtons .page-container {
+  text-align: center;
+  padding: 20px;
+}
+.changePageButtons .page-container .page {
+  display: none;
+}
+.changePageButtons .page-container .page.active {
+  display: block;
+}
+.changePageButtons .page-container #page1 {
+  color: var(--font-color);
+}
+.changePageButtons .page-container #page1 .coffeeProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.changePageButtons .page-container #page1 .coffeeProducts .itemHover {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.changePageButtons .page-container #page1 .coffeeProducts .itemHover ul {
+  list-style: none;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  padding: 15px 10px 5px 10px;
+}
+.changePageButtons .page-container #page1 .coffeeProducts .itemHover ul li {
+  margin-bottom: 10px;
+  font-size: 1.1vw;
+}
+.changePageButtons .page-container #page1 .coffeeProducts .itemHover ul li img {
+  border-radius: 40px;
+  max-width: 100%;
+}
+.changePageButtons .page-container #page1 .coffeeProducts .itemHover:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.changePageButtons .page-container #page2 {
+  color: var(--font-color);
+}
+.changePageButtons .page-container #page2 .teaProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.changePageButtons .page-container #page2 .teaProducts .itemHover {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.changePageButtons .page-container #page2 .teaProducts .itemHover ul {
+  list-style: none;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  padding: 15px 10px 5px 10px;
+}
+.changePageButtons .page-container #page2 .teaProducts .itemHover ul li {
+  margin-bottom: 10px;
+  font-size: 1.1vw;
+}
+.changePageButtons .page-container #page2 .teaProducts .itemHover ul li img {
+  border-radius: 40px;
+  max-width: 100%;
+}
+.changePageButtons .page-container #page2 .teaProducts .itemHover:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.changePageButtons .page-container #page3 {
+  color: var(--font-color);
+}
+.changePageButtons .page-container #page3 .dessertsProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.changePageButtons .page-container #page3 .dessertsProducts .itemHover {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.changePageButtons .page-container #page3 .dessertsProducts .itemHover ul {
+  list-style: none;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  padding: 15px 10px 5px 10px;
+}
+.changePageButtons .page-container #page3 .dessertsProducts .itemHover ul li {
+  margin-bottom: 10px;
+  font-size: 1.1vw;
+}
+.changePageButtons .page-container #page3 .dessertsProducts .itemHover ul li img {
+  border-radius: 40px;
+  max-width: 100%;
+}
+.changePageButtons .page-container #page3 .dessertsProducts .itemHover:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.changePageButtons .page-container .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(106, 103, 103, 0.5);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.changePageButtons .page-container .modal .modal-content {
+  background-color: var(--second-font-color);
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 80%;
+  text-align: center;
+  position: relative;
+}
+.changePageButtons .page-container .modal .modal-content .product-image {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.changePageButtons .page-container .modal .modal-content .product-info {
+  margin-bottom: 10px;
+  font-size: 1.2vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  color: var(--font-color);
+  font-family: Inter;
+}
+.changePageButtons .page-container .modal .modal-content .size-buttons {
+  margin-bottom: 10px;
+}
+.changePageButtons .page-container .modal .modal-content .size-buttons .size-button {
+  padding: 10px !important;
+  margin: 5px !important;
+  background-color: var(--second-font-color) !important;
+  color: var(--font-color) !important;
+  font-size: 1.1vw;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out !important;
+}
+.changePageButtons .page-container .modal .modal-content .size-buttons .size-button:hover {
+  background-color: var(--footer-bg-color) !important;
+  color: var(--second-font-color) !important;
+}
+.changePageButtons .page-container .modal .modal-content .add-on-buttons {
+  margin-bottom: 10px;
+}
+.changePageButtons .page-container .modal .modal-content .add-on-buttons .add-on-button {
+  padding: 10px !important;
+  margin: 5px !important;
+  background-color: var(--second-font-color) !important;
+  color: var(--font-color) !important;
+  font-size: 1.1vw;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 50px !important;
+  cursor: pointer !important;
+  -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out !important;
+}
+.changePageButtons .page-container .modal .modal-content .add-on-buttons .add-on-button:hover {
+  background-color: var(--footer-bg-color) !important;
+  color: var(--second-font-color) !important;
+}
+.changePageButtons .page-container .modal .modal-content .price {
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  color: var(--font-color);
+  margin-bottom: 15px;
+  font-family: Inter;
+}
+.changePageButtons .page-container .modal .modal-content .close-button {
+  cursor: pointer;
+  font-size: 1.2vw;
+  border: 1px solid var(--footer-bg-color);
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 78px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  color: var(--font-color);
+}
+
+@media screen and (max-width: 695px) {
+  .changePageButtons .page-container #page1 .coffeeProducts .itemHover ul {
+    padding: 5px;
+  }
+  .changePageButtons .page-container #page1 .coffeeProducts .itemHover ul li {
+    font-size: 1.2vw;
+  }
+  .changePageButtons .page-container #page2 .teaProducts .itemHover ul {
+    padding: 5px;
+  }
+  .changePageButtons .page-container #page2 .teaProducts .itemHover ul li {
+    font-size: 1.2vw;
+  }
+  .changePageButtons .page-container #page3 .dessertsProducts .itemHover ul {
+    padding: 5px;
+  }
+  .changePageButtons .page-container #page3 .dessertsProducts .itemHover ul li {
+    font-size: 1.2vw;
+  }
+}
+@media screen and (max-width: 556px) {
+  .changePageButtons .button-container .button {
+    padding: 8px 3px;
+  }
+  .changePageButtons .button-container .button p {
+    font-size: 2vw;
+  }
+  .changePageButtons .page-container #page1 .coffeeProducts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .changePageButtons .page-container #page1 .coffeeProducts .itemHover ul {
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .changePageButtons .page-container #page1 .coffeeProducts .itemHover ul li {
+    font-size: 1.5vw;
+  }
+  .changePageButtons .page-container #page1 .coffeeProducts .itemHover ul li img {
+    border-radius: 10px;
+  }
+  .changePageButtons .page-container #page2 .teaProducts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .changePageButtons .page-container #page2 .teaProducts .itemHover ul {
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .changePageButtons .page-container #page2 .teaProducts .itemHover ul li {
+    font-size: 1.5vw;
+  }
+  .changePageButtons .page-container #page2 .teaProducts .itemHover ul li img {
+    border-radius: 10px;
+  }
+  .changePageButtons .page-container #page3 .dessertsProducts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .changePageButtons .page-container #page3 .dessertsProducts .itemHover ul {
+    padding: 10px;
+    border-radius: 20px;
+  }
+  .changePageButtons .page-container #page3 .dessertsProducts .itemHover ul li {
+    font-size: 1.5vw;
+  }
+  .changePageButtons .page-container #page3 .dessertsProducts .itemHover ul li img {
+    border-radius: 10px;
+  }
+}
+.footerContainer {
+  margin: 100px 20px 30px 20px;
+}
+.footerContainer .footerInfo {
+  background-color: var(--footer-bg-color);
+  border-radius: 20px;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footerContainer .footerInfo .infoMessagers h3 {
+  font-size: 4.5vw;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 125%;
+  color: var(--second-font-color);
+}
+.footerContainer .footerInfo .infoMessagers h3 span {
+  color: var(--third-font-color);
+  font-style: italic;
+}
+.footerContainer .footerInfo .infoMessagers ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footerContainer .footerInfo .infoMessagers ul li {
+  margin: 10px;
+}
+.footerContainer .footerInfo .infoContacts p {
+  font-size: 2vw;
+  font-style: normal;
+  font-family: Inter;
+  font-weight: 600;
+  line-height: 125%;
+  color: var(--second-font-color);
+  margin-bottom: 10%;
+  margin-left: 0;
+}
+.footerContainer .footerInfo .infoContacts ul li {
+  padding-bottom: 10%;
+  color: var(--second-font-color);
+}
+.footerContainer .footerInfo .infoContacts ul li #addressLink {
+  color: var(--second-font-color);
+}
+.footerContainer .footerInfo .infoContacts ul li #addressLink:hover {
+  text-decoration: underline;
+}
+.footerContainer .footerInfo .infoContacts ul li span {
+  margin-left: 2%;
+  font-size: 1.5vw;
+}
+.footerContainer .footerInfo .infoContacts ul li .modalMap {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(126, 124, 124, 0.562);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footerContainer .footerInfo .infoContacts ul li .modalMap .modalContentMap {
+  background-color: #e1d4c9;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 70%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-height: calc(100% - 40px);
+  height: 100%;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.footerContainer .footerInfo .infoContacts ul li .modalMap .modalContentMap #mapInModal {
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (max-width: 579px) {
+  .footerContainer {
+    margin: 40px 20px 20px 20px;
+  }
+}
+@media screen and (max-width: 524px) {
+  .footerContainer .footerInfo .infoMessagers ul {
+    margin-top: 10px;
+  }
+  .footerContainer .footerInfo .infoMessagers ul li {
+    margin: 0 -7px;
+  }
+  .footerContainer .footerInfo .infoMessagers ul li a img {
+    width: 50%;
+  }
+  .footerContainer .footerInfo .infoContacts ul li {
+    padding-bottom: 5%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .footerContainer .footerInfo .infoContacts ul li {
+    padding-bottom: 1%;
+  }
+  .footerContainer .footerInfo .infoContacts ul li span {
+    font-size: 1.8vw;
+  }
+}
+@media screen and (max-width: 320px) {
+  .footerContainer .footerInfo .infoMessagers ul {
+    margin-top: 5px;
+  }
+  .footerContainer .footerInfo .infoMessagers ul li {
+    margin: 0 -5px;
+  }
+  .footerContainer .footerInfo .infoMessagers ul li a img {
+    width: 35%;
+  }
+  .footerContainer .footerInfo .infoContacts p {
+    font-size: 3vw;
+  }
+  .footerContainer .footerInfo .infoContacts ul li {
+    padding-bottom: 2%;
+  }
+  .footerContainer .footerInfo .infoContacts ul li img {
+    width: 10%;
+  }
+  .footerContainer .footerInfo .infoContacts ul li a img {
+    width: 10%;
+  }
+}

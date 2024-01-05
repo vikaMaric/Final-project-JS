@@ -1,0 +1,141 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    align-items: center;
+
+    .logo {
+        width: 100px;
+        height: 60px;
+
+        img {
+            position: relative;
+        }
+
+        :nth-child(1) {
+            left: 27%;
+        }
+        :nth-child(2){
+            bottom: 60%;
+        }
+        :nth-child(3){
+            bottom: 55%;
+            left: 15%;
+        }
+    }
+
+    .navMenu {
+        ul {
+            list-style: none;
+            display: flex;
+
+            li {
+                margin-left: 5vh;
+                font-size: 1.2vw;
+                font-family: Inter;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%;
+                
+
+                a {
+                    color: var(--font-color);
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        font-size: 1.2vw;
+        font-style: normal;
+        font-family: Inter;
+        font-weight: 600;
+        line-height: 150%;
+
+        p {
+            a {
+                color: var(--font-color);
+            }    
+        }
+
+        :nth-child(1){
+            margin-right: 0.2vh;
+        }
+
+        :nth-child(2){
+            margin-bottom: 2px;
+        }
+    }
+}
+
+@media screen and (max-width: 534px) {
+
+    .navigation {
+        padding: 20px ;
+
+        .navMenu {
+             ul {
+
+                li {
+                    margin-left: 2vh;
+                    font-size: 1.8vw;
+                }
+             }
+        }
+
+        .menu {
+            font-size: 1.8vw;
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .navigation {
+        padding: 15px ;
+
+        .navMenu {
+             ul {
+
+                li {
+                    margin-left: 1.5vh;
+                    font-size: 1.6vw;
+                }
+             }
+        }
+
+        .menu {
+            font-size: 1.6vw;
+        }
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+
+    .navigation {
+        padding: 10px ;
+
+        .navMenu {
+             ul {
+
+                li {
+                    margin-left: 1.2vh;
+                    font-size: 1.3vw;
+                }
+             }
+        }
+
+        .menu {
+            font-size: 1.3vw;
+
+            img {
+                width: 30%;
+            }
+        }
+    }
+
+
+}
