@@ -83,7 +83,7 @@ function initMap() {
                             zoom: 15
                         });
 
-                        // маркер для кофейни в модальном окно
+                        
                         const marker = new google.maps.Marker({
                             position: coffeeShopLocation,
                             map: mapInModal,
