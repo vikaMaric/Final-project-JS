@@ -53,7 +53,7 @@ updateSlide();
 
 
 function initMap() {
-            // Адрес вашей кофейни
+            // Адрес кофейни
             const coffeeShopAddress = '8558, Green Rd., LA';
 
             // Получите координаты с использованием геокодирования
