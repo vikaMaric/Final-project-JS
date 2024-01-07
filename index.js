@@ -56,25 +56,25 @@ function initMap() {
             // Адрес кофейни
             const coffeeShopAddress = '8558, Green Rd., LA';
 
-            // Получите координаты с использованием геокодирования
+            // Получение координат
             const geocoder = new google.maps.Geocoder();
             geocoder.geocode({ address: coffeeShopAddress }, function (results, status) {
                 if (status === 'OK' && results[0].geometry) {
                     const coffeeShopLocation = results[0].geometry.location;
 
-                    // Открывайте модальное окно при нажатии на адрес
+                    // Открываем мод окно
                     const addressLink = document.getElementById('addressLink');
                     addressLink.addEventListener('click', function () {
-                        // Отображайте модальное окно
+                        
                         document.getElementById('modalMap').style.display = 'flex';
 
-                        // Создайте новую карту в модальном окне и установите центр
+                        
                         const mapInModal = new google.maps.Map(document.getElementById('mapInModal'), {
                             center: coffeeShopLocation,
                             zoom: 15
                         });
 
-                        // Добавьте маркер для кофейни в модальное окно
+                        
                         const marker = new google.maps.Marker({
                             position: coffeeShopLocation,
                             map: mapInModal,
